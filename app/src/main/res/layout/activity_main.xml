@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.basketballperformancetracker.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/two_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="Two Point Shots" />
+
+        <TextView
+            android:id="@+id/two_pointer_shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/two_pointer"
+            android:text="0 shots" />
+
+        <TextView
+            android:id="@+id/two_pointer_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/two_pointer_shots"
+            android:text="0% shooting" />
+
+        <Button
+            android:id="@+id/two_pointer_made"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:onClick="twoPointerMakeIncrement"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="6dp"
+            android:layout_toStartOf="@+id/two_pointer_missed"
+            android:layout_alignBaseline="@id/two_pointer_shots"
+            android:text="Made" />
+
+        <Button
+            android:id="@+id/two_pointer_missed"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#F44336"
+            android:textColor="#FFFFFF"
+            android:onClick="twoPointerIncrement"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/two_pointer_shots"
+            android:text="Missed" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/three_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="Three Point Shots" />
+
+        <TextView
+            android:id="@+id/three_pointer_shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/three_pointer"
+            android:text="0 shots" />
+
+        <TextView
+            android:id="@+id/three_pointer_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/three_pointer_shots"
+            android:text="0% shooting" />
+
+        <Button
+            android:id="@+id/three_pointer_made"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:onClick="threePointerMakeIncrement"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="6dp"
+            android:layout_toStartOf="@+id/three_pointer_missed"
+            android:layout_alignBaseline="@id/three_pointer_shots"
+            android:text="Made" />
+
+        <Button
+            android:id="@+id/three_pointer_missed"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#F44336"
+            android:textColor="#FFFFFF"
+            android:onClick="threePointerIncrement"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/three_pointer_shots"
+            android:text="Missed" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/free_throw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="Free Throws" />
+
+        <TextView
+            android:id="@+id/free_throw_shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/free_throw"
+            android:text="0 shots" />
+
+        <TextView
+            android:id="@+id/free_throw_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            android:layout_below="@id/free_throw_shots"
+            android:text="0% shooting" />
+
+        <Button
+            android:id="@+id/free_throw_made"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:onClick="freeThrowMakeIncrement"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="6dp"
+            android:layout_toStartOf="@+id/free_throw_missed"
+            android:layout_alignBaseline="@id/free_throw_shots"
+            android:text="Made" />
+
+        <Button
+            android:id="@+id/free_throw_missed"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:background="#F44336"
+            android:textColor="#FFFFFF"
+            android:onClick="freeThrowIncrement"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/free_throw_shots"
+            android:text="Missed" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/summation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold|italic"
+        android:layout_marginBottom="12dp"
+        android:textSize="24sp"
+        android:layout_weight="2"
+        android:text="0 shots on 0% shooting" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="0"
+        android:onClick="summationReset"
+        android:text = "RESET"/>
+
+</LinearLayout>
